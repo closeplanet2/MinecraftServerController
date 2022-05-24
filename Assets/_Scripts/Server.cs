@@ -46,6 +46,7 @@ public class Server {
     
     public void RunServer() {
         var startInfo = new ProcessStartInfo();
+        startInfo.WorkingDirectory = serverPath;
         startInfo.FileName = serverPath + "/run.bat";
         Process.Start(startInfo);
     }
